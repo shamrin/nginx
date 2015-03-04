@@ -1,0 +1,10 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: ensure packages are installed
+      apt: pkg={{item}} state=latest
+      with_items:
+        - tree
+    - include: tasks/nginx.yaml
+

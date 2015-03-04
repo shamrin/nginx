@@ -1,0 +1,15 @@
+# Install nginx
+---
+- name: Add nginx deb repository (and gpg key)
+  apt_repository: repo='ppa:nginx/stable'
+
+- name: Add nginx deb-src repository
+  apt_repository: repo='deb-src http://ppa.launchpad.net/nginx/stable/ubuntu {{ ansible_distribution_release }} main'
+
+- name: Install dev packages
+  apt: pkg={{item}} state=installed update_cache=yes
+  with_items:
+    - dpkg-dev
+    - git
+    - devscripts
+    - libgd2-noxpm-dev
