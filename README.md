@@ -13,7 +13,7 @@ via http://stackoverflow.com/a/13581113/17708
     vagrant up
     vagrant ssh
     cd /vagrant
-    git clone https://github.com/wandenberg/nginx-push-stream-module.git
+    git subtree add --prefix=nginx-push-stream-module --squash https://github.com/wandenberg/nginx-push-stream-module.git master
     sudo apt-get build-dep nginx
     apt-get source nginx
     cd nginx-1.6.2/
