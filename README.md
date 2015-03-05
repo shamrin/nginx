@@ -8,14 +8,26 @@
 
 via http://stackoverflow.com/a/13581113/17708
 
-## Bulding nginx with push-stream-module
+## Vagrant
 
     vagrant up
     vagrant ssh
     cd /vagrant
-    git subtree add --prefix=nginx-push-stream-module --squash https://github.com/wandenberg/nginx-push-stream-module.git master
+
+## Get nginx
+
     sudo apt-get build-dep nginx
     apt-get source nginx
+    rm nginx_1.6.2*
+    git add nginx-1.6.2
+    git commit
+
+## Get nginx-push-stream-module
+
+    git clone https://github.com/wandenberg/nginx-push-stream-module.git
+    rm -rf nginx-push-stream-module/.git
+    git add nginx-push-stream-module/
+    git commit
     cd nginx-1.6.2/
     vi debian/rules
 
