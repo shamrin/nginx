@@ -1,0 +1,4 @@
+debian/build-extras/
+debian/build-full/
+debian/build-light/
+debian/nginx*.debhelper.log
