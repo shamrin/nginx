@@ -1,15 +1,30 @@
 ## Nginx, custom debian packages
 
-Building the packages:
+Prerequisites (alternatively do `vagrant up`, it will do this for you):
 
-    git clone …
+    sudo add-apt-repository ppa:nginx/stable
+    sudo apt-get update
+    sudo apt-get build-dep nginx
+    sudo apt-get install libgd2-noxpm-dev
+
+Building packages:
+
+    git clone git@github.com:shamrin/nginx.git
     cd nginx/nginx-1.6.2/
     dpkg-buildpackage -b
     cd ..
 
-Installing:
+Testing packages:
 
-    dpkg --install nginx-common_1.6.2-5+precise0shamrin1_all.deb nginx-full_1.6.2-5+precise0shamrin1_amd64.deb
+    sudo dpkg -i nginx-common_1.6.2-5+precise0shamrin1_all.deb nginx-full_1.6.2-5+precise0shamrin1_amd64.deb  nginx_1.6.2-5+precise0shamrin1_all.deb
+
+Uploading as GitHub release:
+
+    git tag v1.6.2-5+precise0shamrin1
+
+Then create [GitHub release][1] and upload packages there.
+
+[1]: https://github.com/shamrin/nginx/releases
 
 ## Rough description of how this repo was created
 
