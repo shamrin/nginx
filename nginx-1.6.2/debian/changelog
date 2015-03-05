@@ -1,3 +1,9 @@
+nginx (1.6.2-5+precise0shamrin2) precise; urgency=low
+
+  * disable systemd
+
+ -- vagrant <vagrant@precise64>  Thu, 05 Mar 2015 12:53:40 +0000
+
 nginx (1.6.2-5+precise0shamrin1) precise; urgency=low
 
   * add nginx-push-stream-module to nginx-full
