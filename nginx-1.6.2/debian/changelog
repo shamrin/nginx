@@ -1,3 +1,9 @@
+nginx (1.6.2-5+precise0shamrin1) precise; urgency=low
+
+  * add nginx-push-stream-module to nginx-full
+
+ -- Alexey Shamrin <shamrin@gmail.com>  Thu, 05 Mar 2015 00:41:27 +0000
+
 nginx (1.6.2-5+precise0) precise; urgency=medium
 
   * Resync with Debian
